@@ -3,40 +3,64 @@ html {
 }
 
 body {
-    background-image: url(img/actual_background.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
     background-color: #464646;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
     height: 100%;
     overflow: hidden;
-    filter: greyscale(100%);
+}
+
+.background-img {
+	background-image: url(img/actual_background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+	height:100%;
 }
 
 .grey-overlay {
-	height:100%;
-	background-color: rgba(256,128,128, 0.4);
+	height: 100%;
+	background: rgba(70,70,70, 0.6);
 }
 
 .navbar {
-	background-color: black;
-	display: flex;
-	justify-content: flex-end;
-	height: 80px;
+	background-color: white;
+	position: relative;
+	z-index: 1;
+	height: 50px;
+}
+
+.logo {
+	height: 40px;
+	width: auto;
+	position: absolute;
+	left: 15px;
+	z-index: 2;
+	margin: 5px;
+	filter: invert(0%);
+}
+
+.logo:hover {
+	filter: invert(100%);
 }
 
 .navbar a {
 	font-size: 20px;
 	padding:4px;
-	color: white;
+	color: #303030;
+	margin: auto 0;
+	margin-right: 15px;
 }
 
-.navbar a:hover{
-	color:#33455c;
+.sections {
+	display: flex;
+	justify-content: flex-end;
+	background-color: white;
+	position: relative;
+	top:15px;
+	font-family: 'Rubik', sans-serif;
 }
 
 .blank {
@@ -52,6 +76,8 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+	bottom: ;
 }
 
 .intro {
@@ -80,4 +106,20 @@ body {
 
 hr {
 	margin: 0;
+}
+
+.read-about-me-button {
+	border: none;
+	background-color: white;
+	border-radius: 30px;
+	padding: 20px;
+	font-size: 20px;
+	color: #595858;
+	transition-duration: 0.4s;
+	position: relative;
+	top: 15px;
+}
+
+.read-about-me-button:hover {
+	color: #61b5d3;
 }
